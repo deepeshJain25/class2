@@ -3,6 +3,8 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note"
 import CreateArea from "./CreateArea";
+import Keeper from "./Keeper";
+import {Route } from "react-router-dom";
 import '../styles.css'
 
 function App() {
@@ -31,11 +33,10 @@ function App() {
   return (
     <div>
       <Header />
-      <CreateArea onAdd = {getData} />
-      {allNotes}
+      <Route path="/keeper" render={()=> <Keeper><CreateArea onAdd = {getData} />{allNotes}</Keeper>}/>
       <Footer />
     </div>
   );
 }
-
+ 
 export default App;
