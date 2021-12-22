@@ -31,7 +31,7 @@ const Weather = () => {
     const errorMessage = <p>Please enter valid City Name</p>
 
     return (
-        <div>
+        <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
             <h2 style={{textAlign:'center',marginTop:'10px'}}>Weather App</h2>
             <form>
             <input placeholder='Enter City Name' name='city' value={city} onChange={(e)=>setCity(e.target.value)}/>
